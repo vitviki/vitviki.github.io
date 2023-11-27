@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+:root {
+
+    /* Primary */
+    --lightRed: hsla(0, 100%, 67%);
+    --orangeYellow: hsl(39, 100%, 56%);
+    --greenTeal: hsl(166, 100%, 37%);
+    --cobaltBlue: hsl(234, 85%, 45%);
+    --lightRedBackground: hsla(0, 100%, 67%, 0.04);
+    --orangeYellowBackground: hsl(39, 100%, 56%, 0.04);
+    --greenTealBackground: hsl(166, 100%, 37%, 0.04);
+    --cobaltBlueBackground: hsl(234, 85%, 45%, 0.04);
+
+    /* Gradiants */
+    --lightSlateBlue: hsl(252, 100%, 67%);
+    --lightRoyalBlue: hsl(241, 81%, 54%);
+    --violetBlue: hsla(256, 72%, 46%, 1);
+    --persianBlue: hsla(241, 72%, 46%, 0);
+
+    --white: hsl(0, 0%, 100%);
+    --transparentWhite: hsla(0, 0%, 100%, 0.19);
+    --paleBlue: hsl(221, 100%, 96%);
+    --lightLavender: hsl(241, 100%, 89%);
+    --darkGrayBlue: hsl(224, 30%, 27%);
+}
+
+*{ 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 18px;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    height: 500px;
+    width: 736px;
+    display: flex;
+}
+
+.lhs-card {
+    width: 368px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+    border-radius: 30px;
+    padding: 40px 60px;
+    background-image: linear-gradient(180deg, var(--lightSlateBlue), var(--lightRoyalBlue));
+    color: var(--white);
+    z-index: 100;
+}
+
+.lhs-card h3 {
+    font-size: 20px;
+    opacity: 0.6;
+}
+
+.main-score {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-image: linear-gradient(360deg, var(--persianBlue), var(--violetBlue));
+    border-radius: 50%;
+    height: 180px;
+    width: 180px;
+}
+
+.main-score p {
+    opacity: 0.5;
+    font-size: 15px;
+}
+
+.main-score h1 {
+    font-size: 60px;
+    font-weight: 800;
+}
+
+.lhs-card h2 {
+    font-size: 28px;
+}
+
+.lhs-card p {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: -15px;
+    opacity: 0.7;
+}
+
+.rhs-card {
+    width: 398px;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 40px 40px 70px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    margin-left: -30px;
+    gap: 28px;
+    box-shadow: 3px 5px 8px var(--paleBlue);
+}
+
+.rhs-card h3 {
+    font-size: 20px;
+}
+
+.rhs-card ul {
+    list-style:none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.score-bar {
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 15px;
+}
+
+.test-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 17px;
+}
+
+.test-name > img {
+    width: 20px;
+    height: 20px;
+}
+
+.test-name h4 {
+    font-weight: 700;
+}
+
+.reaction {
+    background-color: var(--lightRedBackground);
+}
+
+.reaction .test-name h4 {
+    color: var(--lightRed)
+}
+
+.memory {
+    background-color: var(--orangeYellowBackground);
+}
+
+.memory .test-name h4 {
+    color:var(--orangeYellow)
+}
+
+.verbal {
+    background-color: var(--greenTealBackground);
+}
+
+.verbal .test-name h4 {
+    color: var(--greenTeal)
+}
+
+.visual {
+    background-color: var(--cobaltBlueBackground);
+}
+
+.visual .test-name h4 {
+    color: var(--cobaltBlue);
+}
+
+.score h4 {
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.score span {
+    opacity: 0.5;
+}
+
+button {
+    padding: 18px;
+    color: var(--white);
+    background-color: var(--darkGrayBlue);
+    outline: none;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+button:hover {
+    cursor: pointer;
+    background-image: linear-gradient(180deg, var(--lightSlateBlue), var(--lightRoyalBlue));
+}
+
+@media (max-width: 375px) {
+    body {
+        align-items: start;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    .lhs-card {
+        width: 375px;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+    }
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
