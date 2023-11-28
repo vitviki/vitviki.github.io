@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+:root {
+
+    --tomato: hsl(4, 100%, 67%);
+    --darkSlateGrey: hsl(234, 29%, 20%);
+    --charcoalGrey: hsl(235, 18%, 26%);
+    --grey: hsl(231, 7%, 60%);
+    --white: hsl(0, 0%, 100%);
+}
+
+* {
+ box-sizing: border-box;   
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--charcoalGrey);
+}
+
+main {
+    display: flex;
+    width: 800px;
+    height: 560px;
+    background-color: var(--white);
+    color: var(--darkSlateGrey);
+    padding: 0px 20px 10px 30px;
+    border-radius: 20px;
+}
+
+.lhs-container {
+    width: 60%;
+    padding: 40px 40px 0 20px;
+}
+
+.lhs-container h1 {
+    font-size: 53px;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.lhs-container p {
+    margin-bottom: 25px;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.lhs-container ul {
+    list-style: url('./assets/images/icon-list.svg');
+    margin-left: -15px;
+    margin-bottom: 40px;
+}
+
+li {
+    margin-bottom: 10px;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+li span {
+    position: relative;
+    left: 9px;
+    top: -4px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+.email-labels {
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 11px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.error-label {
+    color: var(--tomato);
+    display: none;
+}
+
+form input {
+    padding: 15px 20px;
+    font-family: inherit;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid var(--grey);
+}
+
+form input:focus {
+    background-color: var(--white);
+    color: black;
+    border: 1px solid var(--grey);
+}
+
+form button {
+    font-family: inherit;
+    font-weight: 700;
+    margin-top: 20px;
+    padding: 15px 20px;
+    background-color: var(--darkSlateGrey);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+}
+
+form button:hover {
+    cursor: pointer;
+    background-image: linear-gradient(90deg, #ff5476, #fe683e);
+}
+
+.rhs-container {
+    width: 40%;
+}
+
+.rhs-container img {
+    position: relative;
+    left: -40px;
+    width: 112%;
+}
+
+#success-card {
+    width: 430px;
+    height: 450px;
+    border: 1px solid black;
+    border-radius: 30px;
+    padding: 40px 50px;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    color: var(--darkSlateGrey);
+    background-color: var(--white);
+}
+
+#success-card h1 {
+    font-size: 50px;
+    margin: 0;
+}
+
+#success-card p {
+    margin: -10px 0 10px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+#success-card p span {
+    font-weight: 700;
+}
+
+#success-card button {
+    width: 100%;
+    height: 50px;
+    border-radius: 8px;
+    background-color: var(--darkSlateGrey);
+    color: white;
+    font-weight: 500;
+    border: none;
+    outline: none;
+}
+
+#success-card button:hover {
+    cursor: pointer;
+    background-image: linear-gradient(90deg, #ff5476, #fe683e);
+}
+
+@media (max-width: 768px) {
+    body {
+        background-color: var(--white);
+        padding: 0;
+        margin: 0;
+    }
+
+    main {
+        flex-direction: column-reverse;
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .lhs-container {
+        width: 100%;
+
+    }
+
+    .rhs-container {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .lhs-container h1 {
+        font-size: 40px;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    .rhs-container img {
+        left: 0px;
+        width: 100%;
+        content: url('./assets/images/illustration-sign-up-mobile.svg');
+    }
+
+    #success-card {
+        min-height: 90vh;
+        border: none;
+        padding: 0;
+        margin: 0;        
+    }
+
+    #success-card button {
+        position: relative;
+        top: 50%;
+    }
+}
