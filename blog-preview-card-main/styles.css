@@ -1,0 +1,127 @@
+@font-face {
+    font-family: 'Figtree';
+    src: url(./assets/fonts/Figtree-VariableFont_wght.ttf), url(./assets/fonts/Figtree-Italic-VariableFont_wght.ttf), url(./assets/fonts/static/Figtree-ExtraBold.ttf), url(./assets/fonts/static/Figtree-SemiBold.ttf);
+    font-weight: normal bold bolder;
+    font-style: normal;
+}
+
+:root {
+    --background: #F4D04E;
+    --black: #111111;
+    --white: #FFFFFF;
+    --gray: #7F7F7F;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body,
+html {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--background);
+    font-family: 'Figtree', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+
+.text-shadow {
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+main {
+    max-width: 384px;
+    padding: 24px;
+    background: var(--white);
+    border-radius: 24px;
+    box-shadow: 8px 8px var(--black);
+}
+
+section {
+    width: 336px;
+    margin-bottom: 24px;
+}
+
+.blockimage > img {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.learning {
+    background-color: var(--background);
+    font-size: 14px;
+    font-weight: bold;
+    padding: 4px 12px;
+    border-radius: 4px;
+    box-shadow: 0px 5px 0 rgba(0, 0, 0, 0.08);
+}
+
+.publish {
+    border: none;
+    font-size: 14px;
+}
+
+.card-info {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4px; 
+}
+
+.card-info > h3 {
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 150%;
+}
+
+.card-info > h3:hover {
+    color: var(--background);
+    text-shadow: none;
+    cursor: pointer;
+}
+
+.card-info > p {
+    color: var(--gray);
+    margin-top: 12px;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 0;
+}
+
+.author img {
+    width: 32px;
+}
+
+.authorname {
+    font-size: 14px;
+    font-weight: bolder;
+}
+
+@media (max-width:375px) {
+    main {
+        width: 327px;
+    }
+
+    section {
+        width: 279px;
+    }
+
+    .blogimage > img {
+        max-width: 100%;
+    }
+}
